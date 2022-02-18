@@ -10,5 +10,5 @@
 </script>
 
 <template>
-  <TopBar title="Volumes"/>
+  <TopBar title="Volumes" :values="true"/>
 </template>

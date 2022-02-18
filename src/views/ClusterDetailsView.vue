@@ -10,5 +10,5 @@
 </script>
 
 <template>
-  <TopBar title="Cluster Details"/>
+  <TopBar title="Cluster Details" :values="true"/>
 </template>

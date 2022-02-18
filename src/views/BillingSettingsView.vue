@@ -10,5 +10,5 @@
 </script>
 
 <template>
-  <TopBar title="Settings > Billing"/>
+  <TopBar title="Settings > Billing" :values="false"/>
 </template>

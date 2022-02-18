@@ -10,5 +10,5 @@
 </script>
 
 <template>
-  <TopBar title="Ip Addresses"/>
+  <TopBar title="Ip Addresses" :values="true"/>
 </template>

@@ -10,5 +10,5 @@
 </script>
 
 <template>
-  <TopBar title="Settings > General"/>
+  <TopBar title="Settings > General" :values="false"/>
 </template>

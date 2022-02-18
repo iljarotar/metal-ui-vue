@@ -10,5 +10,5 @@
 </script>
 
 <template>
-  <TopBar title="Create Cluster"/>
+  <TopBar title="Create Cluster" :values="true"/>
 </template>

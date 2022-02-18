@@ -7,5 +7,14 @@
 </script>
 
 <template>
-  <router-view></router-view>
+  <main>
+    <router-view></router-view>
+  </main>
 </template>
+
+<style>
+  main {
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+  }
+</style>

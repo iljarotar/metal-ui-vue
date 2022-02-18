@@ -10,5 +10,5 @@
 </script>
 
 <template>
-  <TopBar title="Kubernetes"/>
+  <TopBar title="Kubernetes" :values="true"/>
 </template>

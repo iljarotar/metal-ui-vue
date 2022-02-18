@@ -17,7 +17,7 @@ export default defineComponent({
 <template>
   <div id="app-container">
     <Header/>
-    <div id="main-container">
+    <div id="nav-and-main">
       <Navigation/>
       <Main/>
     </div>
@@ -27,10 +27,10 @@ export default defineComponent({
 <style>
   #app-container {
     display: grid;
-    grid-template-rows: 1fr 9fr;
+    grid-template-rows: 1fr 6fr;
     height: 100vh;
   }
-  #main-container {
+  #nav-and-main {
     display: grid;
     grid-template-columns: 1fr 9fr;
   }
