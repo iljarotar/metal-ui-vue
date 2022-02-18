@@ -7,5 +7,5 @@
 </script>
 
 <template>
-  <h3>Dashboard</h3>
+  <router-view></router-view>
 </template>

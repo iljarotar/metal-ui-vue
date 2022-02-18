@@ -8,7 +8,34 @@
 
 <template>
   <nav>
-    <p>Navigation</p>
+    <ul>
+      <li>
+        <router-link to="/">Dashboard</router-link>
+      </li>
+      <li>
+        <router-link to="/Kubernetes">Kubernetes</router-link>
+      </li>
+      <li>
+        <router-link to="/Volumes">Volumes</router-link>
+      </li>
+      <li>
+        <router-link to="/IpAddresses">Ip Addresses</router-link>
+      </li>
+      <li>
+        <details>
+          <summary>Settings</summary>
+          <ul>
+            <li>
+              <router-link to="/GeneralSettings">General</router-link>
+            </li>
+            <li>
+              <router-link to="/BillingSettings">Billing</router-link>
+            </li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+    
   </nav>
 </template>
 

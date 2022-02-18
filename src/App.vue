@@ -27,8 +27,8 @@ export default defineComponent({
 <style>
   #app-container {
     display: grid;
-    grid-template-rows: 1fr 10fr;
-    width: 100vw;
+    grid-template-rows: 1fr 9fr;
+    height: 100vh;
   }
   #main-container {
     display: grid;

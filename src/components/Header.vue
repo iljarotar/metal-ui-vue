@@ -10,3 +10,9 @@
   <h1>Metal Cloud</h1>
 </template>
 
+<style>
+  h1 {
+    height: 100%;
+  }
+</style>
+

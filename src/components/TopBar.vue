@@ -1,14 +1,13 @@
 <script lang="ts">
-  import TopBar from '../components/TopBar.vue'
   import { defineComponent } from 'vue'
 
   export default defineComponent({
-    components: {
-      TopBar
+    props: {
+      title: String
     }
   })
 </script>
 
 <template>
-  <TopBar title="Ip Addresses"/>
+  <h3>{{ title || 'no title provided' }}</h3>
 </template>
