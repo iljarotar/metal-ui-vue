@@ -43,7 +43,6 @@
 <style>
   nav {
     background-color: #777;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

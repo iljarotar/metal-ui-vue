@@ -17,21 +17,28 @@ export default defineComponent({
 <template>
   <div id="app-container">
     <Header/>
-    <div id="nav-and-main">
-      <Navigation/>
-      <Main/>
-    </div>
+    <Navigation id="navigation"/>
+    <Main/>
   </div>
 </template>
 
 <style>
   #app-container {
     display: grid;
-    grid-template-rows: 1fr 6fr;
+    grid-template-areas: 
+     "header header"
+     "nav content";
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: 1fr 9fr;
     height: 100vh;
   }
-  #nav-and-main {
-    display: grid;
-    grid-template-columns: 1fr 9fr;
+  Header {
+    grid-area: header;
+  }
+  #navigation {
+    grid-area: nav;
+  }
+  Main {
+    grid-area: content;
   }
 </style>

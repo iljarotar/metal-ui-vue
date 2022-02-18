@@ -36,9 +36,9 @@
     display: flex;
     justify-content: space-between;
     width: 97%;
-    height: 100%;
     margin: auto;
     border-bottom: 1px solid #666;
+    height: 6em;
   }
   h2 {
     margin: auto 0 auto 2em;

@@ -23,9 +23,6 @@
 </template>
 
 <style>
-  h1 {
-    height: 100%;
-  }
   img {
     width: 5em;
     height: 6em;
@@ -57,7 +54,7 @@
   }
   #user-menu {
     position: relative;
-    margin: auto 2em auto 0;
+    margin: 3em 2em auto 0;
     cursor: pointer;
     width: 8em;
   }
