@@ -15,8 +15,8 @@
     <div id="user-menu">
       <div id="username">john_doe	&#128025;</div>
       <div id="user-settings-dropdown">
-        <div class="dropdown-item"><p>Profile</p></div>
-        <div class="dropdown-item"><p>Logout</p></div>
+        <router-link to="#" tag="div" class="user-dropdown-item"><p>Profile</p></router-link>
+        <router-link to="#" tag="div" class="user-dropdown-item"><p>Logout</p></router-link>
       </div>
     </div>
   </header>
@@ -65,13 +65,14 @@
     color: #0077dd;
     padding-bottom: .7em;
   }
-  .dropdown-item:hover {
+  .user-dropdown-item:hover {
     background-color: #eee;
+    color: inherit;
   }
-  .dropdown-item>p {
+  .user-dropdown-item>p {
     line-height: .5em;
   }
-  .dropdown-item {
+  .user-dropdown-item {
     border-radius: inherit;
   }
 </style>

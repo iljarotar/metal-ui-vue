@@ -5,10 +5,15 @@
   export default defineComponent({
     components: {
       TopBar
+    },
+    data() {
+      return {
+        subtitle: 'Billing'
+      }
     }
   })
 </script>
 
 <template>
-  <TopBar title="Settings > Billing" :values="false"/>
+  <TopBar title="Settings" :values="false" :subtitle="subtitle"/>
 </template>

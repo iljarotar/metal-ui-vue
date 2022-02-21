@@ -5,10 +5,15 @@
   export default defineComponent({
     components: {
       TopBar
+    },
+    data() {
+      return {
+        subtitle: this.$route.params.clusterId as string
+      }
     }
   })
 </script>
 
 <template>
-  <TopBar title="Cluster Details" :values="true"/>
+  <TopBar title="Cluster Details" :values="true" :subtitle="subtitle"/>
 </template>

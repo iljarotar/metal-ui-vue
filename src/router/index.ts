@@ -47,7 +47,7 @@ const router = createRouter({
       component: CreateClusterView
     },
     {
-      path: '/ClusterDetails',
+      path: '/ClusterDetails/:clusterId',
       name: 'cluster-details',
       component: ClusterDetailsView
     }

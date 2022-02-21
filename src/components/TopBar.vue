@@ -1,17 +1,22 @@
 <script lang="ts">
+  import type { PropValidator } from 'element-plus'
   import { defineComponent } from 'vue'
+  import type { PropType } from 'vue'
 
   export default defineComponent({
     props: {
       title: String,
-      values: Boolean
+      values: Boolean,
+      subtitle: {
+        type: String as PropType<string>
+      }
     }
   })
 </script>
 
 <template>
   <div id="top-bar">
-    <h2>{{ title }}</h2>
+    <h2>{{ title }} {{ subtitle }}</h2>
     <div v-if="values" id="values-and-button">
       <div id="values">
         <div class="value-box">

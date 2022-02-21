@@ -5,10 +5,15 @@
   export default defineComponent({
     components: {
       TopBar
+    },
+    data() {
+      return {
+        subtitle: 'General'
+      }
     }
   })
 </script>
 
 <template>
-  <TopBar title="Settings > General" :values="false"/>
+  <TopBar title="Settings" :values="false" :subtitle="subtitle"/>
 </template>

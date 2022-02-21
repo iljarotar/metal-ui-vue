@@ -9,18 +9,22 @@
       TopBar
     },
     methods: {
-      toggleMenu() {
-        this.actionsOpen = !this.actionsOpen
-      }
-    },
-    data() {
-      return {
-        actionsOpen: false,
-        
+      toggleMenu(event: any) {
+        const menu = event.target.nextElementSibling
+        if (menu.style.display === 'none') {
+          menu.style.display = 'block'
+        } else {
+          menu.style.display = 'none'
+        }
       }
     },
     created() {
-      document.addEventListener('click', () => this.actionsOpen = false)
+      document.body.addEventListener('click', () => {
+        const elements: Element[] = Array.from(document.getElementsByClassName('actions-dropdown'))
+        elements.forEach((element: Element) => {
+          (element as HTMLElement).style.display = 'none'
+        })
+      })
     }
   })
 </script>
@@ -38,17 +42,18 @@
           <th>Uptime</th>
           <th>Actions</th>
         </tr>
-        <tr>
+        <tr id="appollo16-list">
           <td style="color: #22aa22;">&#9679;</td>
           <td>apollo16</td>
           <td>K3s-v1.20.0-k3s1</td>
           <td>1</td>
           <td>2 days</td>
           <td>
-            <div class="actions-button" @click.stop="toggleMenu">&#10998;
-              <div id="actions-dropdown" v-if="actionsOpen">
-                <p @click="toggleMenu">Settings</p>
-              </div>
+            <div class="actions-menu">
+              <div class="actions-button" @click.stop="toggleMenu">&#10998;</div>
+              <router-link tag="div" class="actions-dropdown" to="/ClusterDetails/appollo16" style="display: none;">
+                <p>Details</p>
+              </router-link>
             </div>
           </td>
         </tr>
@@ -79,27 +84,33 @@
   tr {
     height: 4em;
   }
-  .actions-button {
+  .actions-menu {
+    display: flex;
+    justify-content: center;
     cursor: pointer;
-    width: 2em;
     margin: auto;
     position: relative;
+  }
+  .actions-button {
+    width: 2em;
   }
   .actions-button:hover {
     background-color: #eee;
     border-radius: 2px;
   }
-  #actions-dropdown {
+  .actions-dropdown {
     position: absolute;
+    top: 1.8em;
     background-color: #fefefe;
     width: 8em;
     border: 1px solid #666;
     border-radius: 5px;
   }
-  #actions-dropdown>p {
-    line-height: .7em;
-  }
-  #actions-dropdown:hover {
+  .actions-dropdown:hover {
     background-color: #eee;
+    color: inherit;
+  }
+  .actions-dropdown>p {
+    line-height: .5em;
   }
 </style>
